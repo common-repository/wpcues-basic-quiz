@@ -1,0 +1,12 @@
+jQuery(document).ready(function($){
+$(document).on('change','#wpcuequiz-quiztypesetting',function(){
+	$quiztype=parseInt($(this).val(),10);
+	if($quiztype==1){
+		if(!($('#quizslug').is(':hidden'))){
+			$('#quizslugvalue').val('');
+			$('#quizslug').hide();}
+	}else{
+		if($('#quizslug').is(':hidden')){$('#quizslug').show();}
+	}
+})
+});
